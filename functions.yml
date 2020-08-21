@@ -1,0 +1,11 @@
+getTeste:
+  name: teste-${self:custom.stage}-query
+  description: Payments notification query
+  handler: ${self:custom.basePath, ''}src/index.handler
+  memorySize: 128
+  timeout: 30
+  events:
+    - http:
+        path: testee
+        method: get
+        cors: true
