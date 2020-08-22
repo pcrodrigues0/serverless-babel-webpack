@@ -2,6 +2,7 @@ service: verify-cognito
 
 plugins:
   - serverless-webpack
+  - serverless-offline
 
 custom:
   stage: ${opt:stage, 'local'}
@@ -15,12 +16,12 @@ provider:
   name: aws
   runtime: nodejs12.x
   tags:
-    projeto: tropicalcbd-app
+    projeto: projectname-app
   stage: ${opt:stage, 'dev'}
   apiName: ${self:service}
   stackName: ${self:service}-${self:custom.stage}
   deploymentBucket:
-    name: dev-tropicalcbd-deploys
+    name: dev-projectname-deploys
   memorySize: 256
   timeout: 30
   versionFunctions: true
@@ -29,7 +30,6 @@ provider:
   environment: ${file(./environments.yml):${self:custom.stage}, file(./environments.yml):default}
 
 functions: ${file(./functions.yml)}
-#functions:
 
 package:
   individually: true
