@@ -21,5 +21,12 @@
   },
   "dependencies": {
     "source-map-support": "^0.5.10"
-  }
+  },
+  "engines": {
+    "node": ">= 12.18",
+    "yarn": ">= 1.22.5"
+  },
+  "author": "Paulo Rodrigues <pcqrodrigues@gmail.com>",
+  "license": "MIT",
+  "private": true
 }
