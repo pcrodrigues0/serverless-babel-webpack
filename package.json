@@ -1,10 +1,13 @@
 {
-  "name": "BoilerPlate-Lambda",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "serverless-babel-webpack-sample",
+  "version": "1.0.1",
+  "description": "A simple way to create an AWS API Gateway lambda",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:local": "sls offline",
+    "deploy:dev": "sls deploy --stage dev",
+    "deploy:qa": "sls deploy --stage qa",
+    "deploy:staging": "sls deploy --stage staging",
+    "deploy:prod": "AWS_PROFILE=your-production-profile SLS_STAGE=prod  serverless deploy --stage prod"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
