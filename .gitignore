@@ -192,6 +192,7 @@ dist
 
 # Build folders/files
 .serverless
+.webpack
 .docker
 jsconfig.json
 
