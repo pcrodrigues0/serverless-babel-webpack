@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "A simple way to create an AWS API Gateway lambda",
   "scripts": {
-    "start:local": "sls offline",
+    "start:local": "sls offline --stage local",
     "deploy:dev": "sls deploy --stage dev",
     "deploy:qa": "sls deploy --stage qa",
     "deploy:staging": "sls deploy --stage staging",
